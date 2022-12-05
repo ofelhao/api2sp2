@@ -17,9 +17,9 @@ app.use((req, res, next) => {
     next();
 });
 app.use("/swap", api);
-app.use("/", api);
 app.use("/swapquotein", api);
 app.use("/swapquote", api);
+app.use("/", api);
 // connection
 const port = process.env.PORT || 9001;
 app.listen(port, () => console.log(`Listening to port ${port}`));

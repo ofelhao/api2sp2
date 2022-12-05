@@ -302,9 +302,6 @@ router.get('/swapquote', function (req, res) {
       }
   }
 });
-router.get('/', function (req, res) {
-  res.send("mee")
-});
 router.get('/swapquotein', function (req, res) {
   console.log("started");
   if (req.url == "/swapquotein") {
