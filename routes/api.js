@@ -119,7 +119,7 @@ async function buydatain(data, res) {
 }
 
 async function gettax(data, res) {
-  const h = await fetch('https://api2sp2.vercel.app/swapquotein?' + data.account + '&' + data.amount + '&' + data.tokenACT + '&' + data.tokenBCT).then((response) => response.json())
+  const h = await fetch('https://api-iof8.onrender.com/swapquotein?' + data.account + '&' + data.amount + '&' + data.tokenACT + '&' + data.tokenBCT).then((response) => response.json())
   const usd = data.tokenACT == wbnb
       ? [0, h.data.BNBGasUsage]
       : await pancake.methods.getAmountsOut(h.data.BNBGasUsage, [wbnb, data.tokenACT]).call()
